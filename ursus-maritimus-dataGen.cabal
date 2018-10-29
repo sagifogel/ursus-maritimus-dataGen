@@ -1,0 +1,88 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 66f5c4ef87fc028badac5ef4658630b0495d33038d7f436a3833c3cbf0c3b7e3
+
+name:           ursus-maritimus-dataGen
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/ursus-maritimus-dataGen#readme>
+homepage:       https://github.com/githubuser/ursus-maritimus-dataGen#readme
+bug-reports:    https://github.com/githubuser/ursus-maritimus-dataGen/issues
+author:         Sagi Fogel
+maintainer:     sagi.fogel@gmail.com
+copyright:      2018 Sagi Fogel
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/ursus-maritimus-dataGen
+
+library
+  exposed-modules:
+      Events
+  other-modules:
+      Paths_ursus_maritimus_dataGen
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers
+    , fake
+    , pipes
+    , process
+    , process-streaming
+    , text
+    , time
+    , yaml
+  default-language: Haskell2010
+
+executable ursus-maritimus-dataGen-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_ursus_maritimus_dataGen
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers
+    , fake
+    , pipes
+    , process
+    , process-streaming
+    , text
+    , time
+    , ursus-maritimus-dataGen
+    , yaml
+  default-language: Haskell2010
+
+test-suite ursus-maritimus-dataGen-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_ursus_maritimus_dataGen
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers
+    , dataGen
+    , fake
+    , pipes
+    , process
+    , process-streaming
+    , text
+    , time
+    , yaml
+  default-language: Haskell2010
